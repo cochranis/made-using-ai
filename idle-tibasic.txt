@@ -1,0 +1,23 @@
+:ClrHome
+:0→C
+:0→A
+:1→B
+:Repeat K=45
+:Output(1,1,"Clicker Game
+:Output(2,1,"Clicks: "+string(C
+:Output(3,1,"Click Power: "+string(B
+:Output(4,1,"Upgrade Cost: "+string(A
+:Output(5,1,"Press ENTER to Click
+:Output(6,1,"Press + to Upgrade
+:getKey→K
+:If K=105
+:Then
+:C+1→C
+:End
+:If K=25 and C≥A
+:Then
+:B+1→B
+:C-A→C
+:2A→A
+:End
+:End

@@ -1,0 +1,30 @@
+10 PRINT "WELCOME TO IDLE QUEST"
+20 PRINT "----------------------"
+30 PRINT
+40 GOLD = 0
+50 WOOD = 0
+60 STONE = 0
+70 PRINT "You have:", GOLD, "gold,", WOOD, "wood,", STONE, "stone."
+80 PRINT
+90 PRINT "1. Gather Gold"
+100 PRINT "2. Gather Wood"
+110 PRINT "3. Gather Stone"
+120 PRINT "4. Quit"
+130 INPUT "What do you want to do? "; CHOICE
+140 IF CHOICE = 1 THEN GOSUB 200
+150 IF CHOICE = 2 THEN GOSUB 250
+160 IF CHOICE = 3 THEN GOSUB 300
+170 IF CHOICE = 4 THEN END
+180 GOTO 70
+190 REM Gather Gold
+200 GOLD = GOLD + 1
+210 PRINT "You found 1 gold."
+220 RETURN
+230 REM Gather Wood
+250 WOOD = WOOD + 1
+260 PRINT "You found 1 wood."
+270 RETURN
+280 REM Gather Stone
+300 STONE = STONE + 1
+310 PRINT "You found 1 stone."
+320 RETURN

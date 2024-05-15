@@ -1,0 +1,23 @@
+10 PRINT "WELCOME TO THE BASIC SLOT MACHINE"
+20 PRINT "---------------------------------"
+30 LET WALLET = 100
+40 PRINT "You have $"; WALLET
+50 PRINT
+60 PRINT "Press any key to spin the reels..."
+70 INPUT "Press Enter: ", SPIN
+80 LET REEL1 = INT(RND * 3) + 1
+90 LET REEL2 = INT(RND * 3) + 1
+100 LET REEL3 = INT(RND * 3) + 1
+110 PRINT
+120 PRINT "Reel 1: "; REEL1
+130 PRINT "Reel 2: "; REEL2
+140 PRINT "Reel 3: "; REEL3
+150 IF REEL1 = REEL2 AND REEL2 = REEL3 THEN GOSUB 200
+160 PRINT
+170 PRINT "You didn't win anything. Try again!"
+180 GOTO 40
+190 END
+200 PRINT "Congratulations! You won $50!"
+210 LET WALLET = WALLET + 50
+220 PRINT "You now have $"; WALLET
+230 RETURN
